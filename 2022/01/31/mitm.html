@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Title | fastpages</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Title" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<meta property="og:description" content="An easy to use blogging platform with support for Jupyter Notebooks." />
+<link rel="canonical" href="https://victor4v.github.io/myblog/2022/01/31/mitm.html" />
+<meta property="og:url" content="https://victor4v.github.io/myblog/2022/01/31/mitm.html" />
+<meta property="og:site_name" content="fastpages" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-01-31T00:00:00-06:00" />
+<script type="application/ld+json">
+{"datePublished":"2022-01-31T00:00:00-06:00","url":"https://victor4v.github.io/myblog/2022/01/31/mitm.html","@type":"BlogPosting","headline":"Title","dateModified":"2022-01-31T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://victor4v.github.io/myblog/2022/01/31/mitm.html"},"description":"An easy to use blogging platform with support for Jupyter Notebooks.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/myblog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://victor4v.github.io/myblog/feed.xml" title="fastpages" /><link rel="shortcut icon" type="image/x-icon" href="/myblog/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/myblog/">fastpages</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/myblog/about/">About Me</a><a class="page-link" href="/myblog/search/">Search</a><a class="page-link" href="/myblog/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Title</h1><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-01-31T00:00:00-06:00" itemprop="datePublished">
+        Jan 31, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      6 min read
+    
+</span></p>
+
+    
+
+    
+      
+        <div class="pb-5 d-flex flex-justify-center">
+          <div class="px-2">
+
+    <a href="https://github.com/victor4v/myblog/tree/master/_notebooks/mitm.ipynb" role="button" target="_blank">
+<img class="notebook-badge-image" src="/myblog/assets/badges/github.svg" alt="View On GitHub">
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://mybinder.org/v2/gh/victor4v/myblog/master?filepath=_notebooks%2Fmitm.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/myblog/assets/badges/binder.svg" alt="Open In Binder"/>
+    </a>
+</div>
+
+          <div class="px-2">
+    <a href="https://colab.research.google.com/github/victor4v/myblog/blob/master/_notebooks/mitm.ipynb" target="_blank">
+        <img class="notebook-badge-image" src="/myblog/assets/badges/colab.svg" alt="Open In Colab"/>
+    </a>
+</div>
+        </div>
+      </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <!--
+#################################################
+### THIS FILE WAS AUTOGENERATED! DO NOT EDIT! ###
+#################################################
+# file to edit: _notebooks/mitm.ipynb
+-->
+
+<div class="container" id="notebook-container">
+        
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Fetching-data">Fetching data<a class="anchor-link" href="#Fetching-data"> </a></h3><p>In order to generate new silk squares, like those designed by Hermès, we will need data, preferably in the form of photos, of the models created by the fashion house. After a little research on the web, we find different sources of data. There are blogs of brand enthusiasts, listing images of squares from various collections. On the Hermès website you can find very good quality images of the latest collections. We will therefore try, first of all, to extract from these different sources what will be the raw material to provide to our algorithm.</p>
+<p>The art of extracting data from websites is called data scraping or web scraping. The legal framework for this practice is a bit of a gray area. You must always be careful not to violate the terms of use of the applications or website on which you want to retrieve this data. In addition, this practice sometimes consists of generating multiple requests that may affect the proper functioning of the site or application in question. It is therefore a question of knowing what one does not to be outside the law.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Summary">Summary<a class="anchor-link" href="#Summary"> </a></h3><ul>
+<li><a href="#Retrieve_images_from_Hermes">1.1 Retrieve images from the Hermès site</a></li>
+<li><a href="#Retrieve_requests_with_Mitmproxy">1.2 Retrieve requests to the Hermès website with Mitmproxy</a>   </li>
+<li><a href="#Building_image_urls">1.3 Building image urls : understanding the pattern</a> </li>
+<li><a href="#Python_code">1.4 Python code</a> </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a id="Retrieve_images_from_Hermes"></a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Retrieve-images-from-the-Herm&#232;s-site.">Retrieve images from the Herm&#232;s site.<a class="anchor-link" href="#Retrieve-images-from-the-Herm&#232;s-site."> </a></h4><p>In order to retrieve the images of the latest collections on the Hermès site, we will have to take an interest in the way their site works. The best way is therefore to go to the page dedicated to the squares and to walk around to see what is going on. </p>
+<p>We see that the content of the site loads dynamically. When scrolling to display more products, the site loads new products as they go. It displays products in packages of 40 items.</p><p><img src="/myblog/images/copied_from_nb/Images/hermes_site.gif" alt="SegmentLocal" title="segment" /></p>
+<p>For those who are already familiar with web scraping, you know it's a bit of a hassle. We won't be able to make a simple request to the squares page, and parse the source code to retrieve the links of all the images at once.</p> 
+<p>One way to do this would be to use a program that controls our browser to scroll and load the different items automatically. Unfortunately (or not) the site is quite good at detecting this kind of program and will not let us do so.</p>
+<p>Therefore, we are going to see what is happening in the back kitchen of the site. We want to try to understand the requests sent to the server when, as a user of the site, we scroll to load more items. To do this we will use a tool called mitmproxy. This is a software positioned between our computer and the web server to which we address ourselves when we visit the site, and which will collect the requests that we send to the site, as well as the responses provided by the server hosting the site.</p><p>This article is not intended to explain in detail the operation of mitmproxy, or its installation. If you wish to learn more about this tool, I invite you to consult <a href="https://docs.mitmproxy.org/stable/">their documentation</a>. For other funny examples of uses, you can check out these resources :</p>
+<ul>
+<li><a href="https://www.toptal.com/back-end/reverse-engineering-the-private-api-hacking-your-couch">reverse engeniering a private api from couchsurfing website w/ mitmproxy</a>. </li>
+<li><a href="https://www.youtube.com/watch?v=LbPKgknr8m8">reverse engeniering your bookstore app w/ mitmproxy</a>. </li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a id="Retrieve_requests_with_Mitmproxy"></a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Retrieve-requests-to-the-Herm&#232;s-website-with-Mitmproxy">Retrieve requests to the Herm&#232;s website with Mitmproxy<a class="anchor-link" href="#Retrieve-requests-to-the-Herm&#232;s-website-with-Mitmproxy"> </a></h4><p>Once mitmproxy is configured on our computer, we will repeat the experience of browsing the site. This time we will see in real time the requests made by our browser, as well as the responses from their server. We see that there are a lot of requests, and we will have to inspect them one by one to find what we are looking for. Namely, how is formulated the request that tells the site to load products on the page.</p><p><img src="/myblog/images/copied_from_nb/Images/flow.gif" alt="SegmentLocal" title="segment" /></p>
+<p><p>It's when you try to load more elements than those displayed on the base page that you find what you were looking for. A request is sent to a kind of private API which communicates with a database. 
+<figure>
+  
+    <img class="docimage" src="/myblog/images/copied_from_nb/Images/mitm_flow.png" alt="Drawing" />
+    
+    
+</figure>
+</p>
+<p><p>When we look more closely at the various query parameters. Pagesize is the number of items to display. Offset, is the number of elements from which it is necessary to start to count the elements to be displayed, and a Sort parameter which indicates the way in which the elements are displayed (here by relevance).</p>
+<figure>
+  
+    <img class="docimage" src="/myblog/images/copied_from_nb/Images/mitm_request.png" alt="Drawing" />
+    
+    
+</figure>
+</p>
+<p><p>What is even more interesting is the format of the response. This is a nice json file with the items and details like the page urls for each of them.</p>
+<figure>
+  
+    <img class="docimage" src="/myblog/images/copied_from_nb/Images/mitm_response2.png" alt="Drawing" />
+    
+    
+</figure>
+</p>
+
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a id="Building_image_urls"></a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Building-image-urls:-understanding-the-pattern">Building image urls: understanding the pattern<a class="anchor-link" href="#Building-image-urls:-understanding-the-pattern"> </a></h3><p>Each image displayed on the site is accessible as an object via a url. When the site loads, it calls these urls to display the images. To understand how these urls are constructed, we will inspect a few product pages. By right clicking on the image you can get the link to the image. After observing a few urls, we find the following pattern: base_url+1700...</p><p>What's great is that all the information we need to rebuild these urls is all present in the json that we retrieved in the previous step.</p><p>So to achieve our goals we need:</p>
+<ul>
+<li>Formulate the 5 requests to the "http://" url by varying the offset parameter to retrieve the information of the 200 products (5*40 = 200). - Once the json files have been saved, the data they contain is processed to build the urls of the images of each of the products.</li>
+<li>We then send requests to these image urls and record the responses.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a id="Python_code"></a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Python-code">Python code<a class="anchor-link" href="#Python-code"> </a></h3><p>Let's get our hands on the code a bit. With mitmproxy, we can retrieve the request that interests us in the form of curl. We convert this curl request in python thanks to <a href="https://curlconverter.com/#">this great tool</a>. Which give :</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">cookies</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;datadome&#39;</span><span class="p">:</span> <span class="s1">&#39;6dGCGJi7OY-QVuTMNf_Va-ihruAS4fT~-prPt53aTUtSMJ6e2jTRdQI9rOCLxC9775DR1GQRrpLUs~67PZ000nS-WYlYuszR-qNvBG9kGLXYs.yI6CUPOdCrifnldDu&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;ECOM_SESS&#39;</span><span class="p">:</span> <span class="s1">&#39;fcj2587fp2kfmusvhj08lbfbc5&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;correlation_id&#39;</span><span class="p">:</span> <span class="s1">&#39;1808b1db587ebab640cced310efcb6dfdd899ab3eb0c44ea08e3f11ab65441ee&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;_gcl_au&#39;</span><span class="p">:</span> <span class="s1">&#39;1.1.198033202.1643632040&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;_ga&#39;</span><span class="p">:</span> <span class="s1">&#39;GA1.2.706534774.1643632042&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;_gid&#39;</span><span class="p">:</span> <span class="s1">&#39;GA1.2.616364715.1643632042&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;GeoFilteringBanner&#39;</span><span class="p">:</span> <span class="s1">&#39;1&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;_uetsid&#39;</span><span class="p">:</span> <span class="s1">&#39;241e11c0829111eca0f5e908623d4c81&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;_uetvid&#39;</span><span class="p">:</span> <span class="s1">&#39;241e4b10829111ecb2360bf65e216a0f&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;_ga_Y862HCHCQ7&#39;</span><span class="p">:</span> <span class="s1">&#39;GS1.1.1643632042.1.0.1643632045.0&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;_cs_c&#39;</span><span class="p">:</span> <span class="s1">&#39;1&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;_cs_id&#39;</span><span class="p">:</span> <span class="s1">&#39;116f9e30-3c8e-acbc-ecf4-8ef80963d888.1643632043.1.1643632043.1643632043.1.1677796043154&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;ABTasty&#39;</span><span class="p">:</span> <span class="s1">&#39;uid=hs12gaez8thx8txq&amp;fst=1643632043261&amp;pst=-1&amp;cst=1643632043261&amp;ns=1&amp;pvt=1&amp;pvis=1&amp;th=&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">headers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;User-Agent&#39;</span><span class="p">:</span> <span class="s1">&#39;Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:96.0) Gecko/20100101 Firefox/96.0&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Accept&#39;</span><span class="p">:</span> <span class="s1">&#39;application/json, text/plain, */*&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Accept-Language&#39;</span><span class="p">:</span> <span class="s1">&#39;fr,fr-FR;q=0.8,en-US;q=0.5,en;q=0.3&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Origin&#39;</span><span class="p">:</span> <span class="s1">&#39;https://www.hermes.com&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Connection&#39;</span><span class="p">:</span> <span class="s1">&#39;keep-alive&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Referer&#39;</span><span class="p">:</span> <span class="s1">&#39;https://www.hermes.com/&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Sec-Fetch-Dest&#39;</span><span class="p">:</span> <span class="s1">&#39;empty&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Sec-Fetch-Mode&#39;</span><span class="p">:</span> <span class="s1">&#39;cors&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;Sec-Fetch-Site&#39;</span><span class="p">:</span> <span class="s1">&#39;same-site&#39;</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">offset</span> <span class="o">=</span> <span class="mi">40</span>
+
+<span class="n">params</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="p">(</span><span class="s1">&#39;locale&#39;</span><span class="p">,</span> <span class="s1">&#39;fr_fr&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;category&#39;</span><span class="p">,</span> <span class="s1">&#39;WOMENSILKSCARVESETC&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;sort&#39;</span><span class="p">,</span> <span class="s1">&#39;relevance&#39;</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;offset&#39;</span><span class="p">,</span> <span class="n">offset</span><span class="p">),</span>
+    <span class="p">(</span><span class="s1">&#39;pagesize&#39;</span><span class="p">,</span> <span class="s1">&#39;40&#39;</span><span class="p">),</span>
+<span class="p">)</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;https://bck.hermes.com/products&#39;</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="n">cookies</span><span class="o">=</span><span class="n">cookies</span><span class="p">)</span> 
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>When we make our request, the server returns a json file. The first item in the list of items in this file is displayed.</p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">json_response</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+<span class="n">items</span> <span class="o">=</span> <span class="n">json_response</span><span class="p">[</span><span class="s1">&#39;products&#39;</span><span class="p">][</span><span class="s1">&#39;items&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">items</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>{&#39;sku&#39;: &#39;H892813S 16&#39;, &#39;title&#39;: &#39;Gavroche 45 Della Cavalleria&#39;, &#39;productCode&#39;: &#39;S102&#39;, &#39;perso_product_type&#39;: &#39;silk&#39;, &#39;assets&#39;: [{&#39;url&#39;: &#39;//assets.hermes.com/is/image/hermesproduct/892813S%2016_flat_1?a=a&amp;size=3000,3000&amp;extend=300,300,300,300&amp;align=0,0&#39;, &#39;type&#39;: &#39;image&#39;, &#39;source&#39;: &#39;scene7&#39;}, {&#39;url&#39;: &#39;//assets.hermes.com/is/image/hermesproduct/892813S%2016_worn_2?a=a&amp;size=3000,3000&amp;extend=0,0,0,0&amp;align=0,0&#39;, &#39;type&#39;: &#39;image&#39;, &#39;source&#39;: &#39;scene7&#39;}], &#39;moreColors&#39;: False, &#39;size&#39;: &#39;SANS_TAILLE&#39;, &#39;avgColor&#39;: &#39;rose&#39;, &#39;departmentCode&#39;: &#39;S&#39;, &#39;familyCode&#39;: &#39;S10&#39;, &#39;divisionCode&#39;: &#39;04&#39;, &#39;price&#39;: 190, &#39;url&#39;: &#39;/product/gavroche-45-della-cavalleria-H892813Sv16&#39;, &#39;slug&#39;: &#39;gavroche-45-della-cavalleria&#39;, &#39;hasStock&#39;: True, &#39;hasStockRetail&#39;: False, &#39;hasStockOrHasStockRetail&#39;: False, &#39;stock&#39;: {&#39;ecom&#39;: True, &#39;retail&#39;: False}, &#39;personalize&#39;: True}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">urls</span> <span class="o">=</span> <span class="p">[]</span> 
+
+<span class="n">base_url</span> <span class="o">=</span> <span class="s1">&#39;https://assets.hermes.com/is/image/hermesproduct/&#39;</span> 
+<span class="n">suffix</span> <span class="o">=</span> <span class="s1">&#39;-flat-1-300-0-1700-1700-q99_b.jpg&#39;</span>
+
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">items</span><span class="p">:</span>
+    <span class="n">slug</span> <span class="o">=</span> <span class="n">item</span><span class="p">[</span><span class="s1">&#39;slug&#39;</span><span class="p">]</span>
+    <span class="n">sku</span> <span class="o">=</span> <span class="n">item</span><span class="p">[</span><span class="s1">&#39;sku&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">:]</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="n">base_url</span> <span class="o">+</span> <span class="n">slug</span> <span class="o">+</span> <span class="s1">&#39;--&#39;</span> <span class="o">+</span> <span class="n">sku</span> <span class="o">+</span> <span class="n">suffix</span>
+    <span class="n">urls</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">urls</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>https://assets.hermes.com/is/image/hermesproduct/gavroche-45-della-cavalleria--892813S 16-flat-1-300-0-1700-1700-q99_b.jpg
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">image_url</span> <span class="o">=</span> <span class="n">urls</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">image_url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span> <span class="n">cookies</span><span class="o">=</span><span class="n">cookies</span><span class="p">)</span>
+<span class="n">bytes_image</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">content</span>
+<span class="n">jpeg_img</span> <span class="o">=</span> <span class="nb">bytearray</span><span class="p">(</span><span class="n">bytes_image</span><span class="p">)</span>
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;image.jpeg&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">jpeg_img</span><span class="p">)</span>
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;_io.BufferedWriter name=&#39;image.jpeg&#39;&gt;
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+&lt;/div&gt;
+ 
+
+</p></div></div></div></div>
+
+
+  </div><a class="u-url" href="/myblog/2022/01/31/mitm.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/myblog/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/myblog/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/myblog/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>An easy to use blogging platform with support for Jupyter Notebooks.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/fastai" target="_blank" title="fastai"><svg class="svg-icon grey"><use xlink:href="/myblog/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/fastdotai" target="_blank" title="fastdotai"><svg class="svg-icon grey"><use xlink:href="/myblog/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
